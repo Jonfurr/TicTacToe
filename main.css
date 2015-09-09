@@ -23,3 +23,7 @@
 .board div{
 	border: 1px solid red;
 }
+
+button {
+	margin:5%;
+}
