@@ -1,0 +1,25 @@
+/*Layout placeholders*/
+.header	{
+	border: 1px solid black;
+	text-align: center;
+}
+
+.left {
+	border: 1px solid green;
+	text-align: center;
+}
+
+.mid {
+	background-color: gray;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.right {
+	border: 1px solid green;
+	text-align: center;
+}
+
+.board div{
+	border: 1px solid red;
+}
