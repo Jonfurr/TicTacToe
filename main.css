@@ -1,29 +1,75 @@
 /*Layout placeholders*/
+
+
 .header	{
-	border: 1px solid black;
+	border-bottom: 3px solid black;
 	text-align: center;
+	background-color: #B3B3B3;
+	margin-top: 5%;
+}
+.header p {
+	font-size: 500%;
+	padding-top: 1%;
+	font-family: 'Poiret One', cursive;
 }
 
+.body {
+	background-color: #E0E0E0;
+ }
+
+
+h1 {
+	font-family: 'Poiret One';
+	font-weight: bolder;
+}
+
+.board{
+	padding: 5% 0 25% 0;
+	display: block;
+}
 .left {
-	border: 1px solid green;
 	text-align: center;
+
 }
 
 .mid {
-	background-color: gray;
 	text-align: center;
 	margin: 0 auto;
 }
 
+.left-col {
+	text-align: right;
+	border-right: 3px solid black;
+}
+
+.right-col {
+	text-align: left;
+	border-left:  3px solid black;
+}
+
 .right {
-	border: 1px solid green;
 	text-align: center;
 }
 
 .board div{
-	border: 1px solid red;
 }
+ .toprow {
+ 	border-bottom:3px solid black;
+ }
+
+ .lastrow {
+ 	border-top:3px solid black;
+ }
 
 button {
-	margin:5%;
+	margin:3px;
+	width: 75px;
+	height: 75px;
+	/*background-image: url("button-default.png");
+	background-size: 100%;
+	background-repeat: no-repeat;*/
+	padding-right: 3px;
+	padding-bottom: 3px;
+
+
 }
