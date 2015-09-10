@@ -1,37 +1,37 @@
 $(function() {
-
-	// function checkRow(topRow) {
-	// // 		// if there are nulls, return still playing
-	// 	var prevVal = "";
-	// 	var topRow = [$(#one).html(),($#two).html(),$(#three).html()]
-	// // 	// 	loop through top row
-	// 	for (var i = 0; i < topRow.length; i++) 
-	// // 	// 	compare current value to previous value
-	// 		if (topRow[i] === prevVal || i===0) {
-	// 			prevVal = rowTop[i];
-	// 		}
-	// 		else {
-	// 			return "Tie";
-	// 		}
-	// 	}
-	// // if finished loop, prevVal[i] === "Winner"	
-
 	function gamePlay() {
 		var turnCounter = 0
 		$("button").on("click",function() {
 			if (turnCounter % 2 === 0) {
-				// ($(this).css("background-image", "url(button-X.png)"));
 				($(this).html("X"));
+				// ($(this).css("background-image", "url(button-X.png)"));
 				getWinner();
 			}
 			else {
-				// ($(this).css("background-image", "url(button-O.png)"));
 				($(this).html("O"));
+				// ($(this).css("background-image", "url(button-O.png)"));
 				getWinner();
 			}
 			turnCounter++;
 		});
 	};
+	function xWins(){
+		$(".headmid").html("<p>Player 1 Wins!</p>");
+		var wins = parseInt($("#leftwins").html());
+		var winCount = wins + 1;
+		$("#leftwins").html(winCount);
+		$("#rightlosses").html(winCount);
+	}
+
+	function oWins(){
+		$(".headmid").html("<p>Player 2 Wins!</p>");
+		var wins = parseInt($("#rightwins").html());
+		var winCount = wins + 1;
+		$("#leftlosses").html(winCount);
+		$("#rightwins").html(winCount);
+	}
+
+
 
 	function getWinner() {
 		var a = $("#one").html();
@@ -45,55 +45,55 @@ $(function() {
 		var i = $("#nine").html();
 
 		if (a === "X" && b === "X" && c === "X") {
-			alert("X Wins");
+			xWins();
 		}		
 		else if (d === "X" && e === "X" && f === "X") {
-			alert("X Wins");
+			xWins();
 		}
 		else if (g === "X" && h === "X" && i === "X") {
-			alert("X Wins");
+			xWins();
 		}
 		else if (a === "X" && d === "X" && g === "X") {
-			alert("X Wins");
+			xWins();
 		}
 		else if (b === "X" && e === "X" && h === "X") {
-			alert("X Wins");
+			xWins();
 		}
 		else if (c === "X" && f === "X" && i === "X") {
-			alert("X Wins");
+			xWins();
 		}
 		else if (a === "X" && e === "X" && i === "X") {
-			alert("X Wins");
+			xWins();
 		}
 		else if (c === "X" && e === "X" && g === "X") {
-			alert("X Wins");
+			xWins();
 		}
-		else if (a === "X" && b === "X" && c === "X") {
-			alert("X Wins");
+		else if (a === "O" && b === "O" && c === "O") {
+			oWins();
 		}
 		else if (d === "O" && e === "O" && f === "O") {
-			alert("O Wins");
+			oWins();
 		}
 		else if (g === "O" && h === "O" && i === "O") {
-			alert("O Wins");
+			oWins();
 		}
 		else if (a === "O" && d === "O" && g === "O") {
-			alert("O Wins");
+			oWins();
 		}
 		else if (b === "O" && e === "O" && h === "O") {
-			alert("O Wins");
+			oWins();
 		}
 		else if (c === "O" && f === "O" && i === "O") {
-			alert("O Wins");
+			oWins();
 		}
 		else if (a === "O" && e === "O" && i === "O") {
-			alert("O Wins");
+			oWins();
 		}
 		else if (c === "O" && e === "O" && g === "O") {
-			alert("O Wins");
+			oWins();
 		}
 		else {
-			alert("Next Player");
+			console.log("Next Player");
 		}
 
 	}

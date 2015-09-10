@@ -29,6 +29,7 @@ h1 {
 }
 .left {
 	text-align: center;
+	padding: 5% 0 25% 0;
 
 }
 
@@ -49,6 +50,7 @@ h1 {
 
 .right {
 	text-align: center;
+	padding: 5% 0 25% 0;
 }
 
 .board div{
@@ -65,11 +67,14 @@ button {
 	margin:3px;
 	width: 75px;
 	height: 75px;
-	/*background-image: url("button-default.png");
+	color: #000000;
+	font-size: 90%;
+	/*background-image: url("button-default.png");*/
 	background-size: 100%;
-	background-repeat: no-repeat;*/
+	background-repeat: no-repeat;
 	padding-right: 3px;
 	padding-bottom: 3px;
+	color
 
 
 }
