@@ -67,6 +67,9 @@ button {
 	padding-bottom: 3px;
 	box-shadow: 3px 3px 3px #888888;
 }
+button:focus {
+	outline: none;
+}
 
 input {
 	margin-top: 5%;
