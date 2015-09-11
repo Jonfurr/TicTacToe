@@ -8,13 +8,11 @@ $(function() {
 			if (turnCounter % 2 === 0) {
 				($(this).html("X"));
 				$("h2").html("");
-				// disableButton();
 				getWinner();	
 			}
 			else {
 				($(this).html("O"));
 				$("h2").html("");
-				// disableButton();
 				getWinner();
 			}
 
@@ -63,45 +61,6 @@ $(function() {
 		$("h2").html("Player 2 wins");
 		clearBoard();
 	}
-
-	// function disableButton(){
-	// 	var a = $("#one").html();
-	// 	var b = $("#two").html();
-	// 	var c = $("#three").html();
-	// 	var d = $("#four").html();
-	// 	var e = $("#five").html();
-	// 	var f = $("#six").html();
-	// 	var g = $("#seven").html();
-	// 	var h = $("#eight").html();
-	// 	var i = $("#nine").html();
-	// 	if ((a == "X") || (a == "O")) {
-	// 		$("#one").disabled = true;
-	// 	}
-	// 	if ((b == "X") || (b == "O")) {
-	// 		$("#two").disabled = true;
-	// 	}
-	// 	if ((c == "X") || (c == "O")) {
-	// 		$("#three").disabled = true;
-	// 	}
-	// 	if ((d == "X") || (d == "O")) {
-	// 		$("#four").disabled = true;
-	// 	}
-	// 	if ((e == "X") || (e == "O")) {
-	// 		$("#five").disabled = true;
-	// 	}
-	// 	if ((f == "X") || (f == "O")) {
-	// 		$("#six").disabled = true;
-	// 	}
-	// 	if ((g == "X") || (g == "O")) {
-	// 		$("#seven").disabled = true;
-	// 	}
-	// 	if ((h == "X") || (h == "O")) {
-	// 		$("#eight").disabled = true;
-	// 	}
-	// 	if ((i == "X") || (i == "O")) {
-	// 		$("#nine").disabled = true;
-	// 	}
-	// }
 
 	function getWinner() {
 	var a = $("#one").html();
