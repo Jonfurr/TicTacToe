@@ -6,66 +6,82 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="main.js"></script>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="animate.css"
 	</head>
 	<body>
-		<div class= "container">
+		<div class= " mainBox container">
 			<header class= "header row">
 				<!-- Sticky header -->
-				<div class= "headleft col-md-2">
-					<p>TEST HEADLEFT CONTENT</p>
+				<div class= "headleft col-xs-2">
+					<p>X</p>
 				</div>
-				<div class= "headmid col-md-8">
-					<p>TEST HEADMID CONTENT</p>
+				<div class= "headmid col-xs-8">
+					<p>Tic Tac Toe</p>
 				</div>
-				<div class= "headright col-md-2">
-					<p>TEST HEADRIGHT CONTENT</p>
+				<div class= "headright col-xs-2">
+					<p>O</p>
 				</div>
 			</header>
 			<div class="body row">	
-				<div class="left col-md-3">
+				<div class="scoreboard col-xs-3">
 					<!-- Player 1 statistics -->
-					<h1>PLAYER 1</h2>
+					<h1>PLAYER 1</h1>
+					<h3>Wins: <h4 id= "leftwins">0</h4></h3>
+					<h3>Losses: <h4 id="leftlosses">0</h4></h3>
 				</div>
-				<div class="board mid col-md-6">
+				<div class = "col-xs-1">
+				</div>
+				<div class="mid col-xs-4">
 					<!-- Game board -->
 					<div class="toprow row">
-						<div id="one" class="center-block col-xs-4">
-							<button>1</button>
+						<div class="left-col center-block col-xs-4">
+							<button id="one"  class="btn-lg"> </button>
 						</div>
-						<div id="two" class="center-block col-xs-4">
-							<button>2</button>
+						<div class="center-block col-xs-4">
+							<button id="two" class="btn-lg"> </button>
 						</div>
-						<div id="three" class="center-block col-xs-4">
-							<button>3</button>
+						<div class="right-col center-block col-xs-4">
+							<button id="three" class="btn-lg"> </button>
 						</div>
 					</div>
 					<div class="midrow row">
-						<div id="four" class="center-block col-xs-4">
-							<button>4</button>
+						<div class=" left-col center-block col-xs-4">
+							<button id="four" class="btn-lg"> </button>
 						</div>
-						<div id="five" class="center-block col-xs-4">
-							<button>5</button>
+						<div class="center-block col-xs-4">
+							<button id="five" class="btn-lg"> </button>
 						</div>
-						<div id="six" class="center-block col-xs-4">
-							<button>6</button>
+						<div class=" right-col center-block col-xs-4">
+							<button id="six" class="btn-lg"> </button>
 						</div>
 					</div>
 					<div class="lastrow row">
-						<div id="seven" class="center-block col-xs-4">
-							<button>7</button>
+						<div class="left-col center-block col-xs-4">
+							<button id="seven" class="btn-lg"> </button>
 						</div>
-						<div id="8" class="center-block col-xs-4">
-							<button>8</button>
+						<div class="center-block col-xs-4">
+							<button id="eight" class="btn-lg"> </button>
 						</div>
-						<div id="9" class="center-block col-xs-4">
-							<button>9</button>
+						<div class="right-col center-block col-xs-4">
+							<button id="nine" class="btn-lg"> </button>
+						</div>
+					</div>
+					<input id="resetButton" type="button" value="Reset Board">
+					<div class = "row">
+						<div class = "col-xs-12">
+							<h2 class= "animated flash infinite"></h2>
 						</div>
 					</div>
 				</div>
-				<div class="right col-md-3">
+				<div class = "col-xs-1">
+				</div>
+				<div class="right scoreboard col-xs-3">
 					<!-- Player 2 statistics -->
 					<h1>PLAYER 2</h1>
+					<h3>Wins: <h4 id= "rightwins">0</h4></h3>
+					<h3>Losses: <h4 id= "rightlosses">0</h4></h3>
 				<div>
 			</div>
 		</div>

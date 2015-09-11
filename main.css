@@ -1,29 +1,73 @@
 /*Layout placeholders*/
+
+
 .header	{
-	border: 1px solid black;
 	text-align: center;
+	background-color: #B3B3B3;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	box-shadow: 3px 3px 3px #888888;
+	border-radius: 20px;
+}
+.header p {
+	font-size: 500%;
+	padding-top: 1%;
+	font-family: 'Poiret One', cursive;
 }
 
-.left {
-	border: 1px solid green;
+.body {
+	background-color: #E0E0E0;
+	box-shadow: 3px 3px 3px #888888;
+	border-radius: 20px;
+ }
+
+
+h1 {
+	font-family: 'Poiret One';
+	font-weight: bolder;
+}
+
+h2 {
+	font-size: 350%;
+	padding-bottom: 1%;
+	font-family: 'Poiret One', cursive;
+}
+
+.scoreboard {
 	text-align: center;
+	padding: 5% 0 25% 0;
 }
 
 .mid {
-	background-color: gray;
 	text-align: center;
 	margin: 0 auto;
+	padding: 5% 0 5% 0;
+	display: block;
 }
 
-.right {
-	border: 1px solid green;
-	text-align: center;
+.left-col {
+	text-align: right;
+}
+ 
+.right-col {
+	text-align: left;
 }
 
-.board div{
-	border: 1px solid red;
-}
+
 
 button {
-	margin:5%;
+	margin:0 3px 3px 3px;
+	width: 55px;
+	height: 55px;
+	color: #000000;
+	font-size: 90%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	box-shadow: 3px 3px 3px #888888;
+}
+
+input {
+	margin-top: 5%;
 }
