@@ -23,9 +23,12 @@ h1 {
 	font-weight: bolder;
 }
 
-.board{
-	padding: 5% 0 25% 0;
-	display: block;
+h2 {
+	font-size: 350%;
+	padding-bottom: 1%;
+	font-family: 'Poiret One', cursive;
+}
+
 }
 .left {
 	text-align: center;
@@ -36,16 +39,16 @@ h1 {
 .mid {
 	text-align: center;
 	margin: 0 auto;
+	padding: 5% 0 5% 0;
+	display: block;
 }
 
 .left-col {
 	text-align: right;
-	border-right: 3px solid black;
 }
 
 .right-col {
 	text-align: left;
-	border-left:  3px solid black;
 }
 
 .right {
@@ -53,20 +56,11 @@ h1 {
 	padding: 5% 0 25% 0;
 }
 
-.board div{
-}
- .toprow {
- 	border-bottom:3px solid black;
- }
-
- .lastrow {
- 	border-top:3px solid black;
- }
 
 button {
-	margin:3px;
-	width: 75px;
-	height: 75px;
+	margin:0 3px 3px 3px;
+	width: 55px;
+	height: 55px;
 	color: #000000;
 	font-size: 90%;
 	/*background-image: url("button-default.png");*/
@@ -78,5 +72,5 @@ button {
 }
 
 input {
-	margin-top: 5%;
+	margin-top: 5%
 }

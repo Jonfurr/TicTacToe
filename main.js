@@ -4,17 +4,22 @@ $(function() {
 		$("button").on("click",function() {
 			if (turnCounter % 2 === 0) {
 				($(this).html("X"));
-				// ($(this).css("background-image", "url(button-X.png)"));
+				$("h2").html("");
 				getWinner();
 			}
 			else {
 				($(this).html("O"));
-				// ($(this).css("background-image", "url(button-O.png)"));
+				$("h2").html("");
 				getWinner();
 			}
 			turnCounter++;
 		});
 	};
+	// function buttonOnce(){
+	// 	if ($("button").html() === "X" || $("button").html() === "O") {
+	// 		$('button').attr("disabled", true);
+		// }
+	// }
 	function clearBoard() {
 		$("#one").html("");
 		$("#two").html("");
@@ -32,22 +37,27 @@ $(function() {
 		})
 	}
 	function xWins(){
-		$(".headmid").html("<p>Player 1 Wins!</p>");
 		var wins = parseInt($("#leftwins").html());
 		var winCount = wins + 1;
 		$("#leftwins").html(winCount);
 		$("#rightlosses").html(winCount);
+		$("h2").html("Player 1 wins");
 		clearBoard();
 	}
 
 	function oWins(){
-		$(".headmid").html("<p>Player 2 Wins!</p>");
 		var wins = parseInt($("#rightwins").html());
 		var winCount = wins + 1;
 		$("#leftlosses").html(winCount);
 		$("#rightwins").html(winCount);
+		$("h2").html("Player 2 wins");
 		clearBoard();
 	}
+
+	// function tie(){
+	// 	alert("It's a tie");
+	// 	clearBoard();
+	// }
 
 
 
@@ -110,6 +120,17 @@ $(function() {
 		else if (c === "O" && e === "O" && g === "O") {
 			oWins();
 		}
+		// else if (a === "X" || a === "O" &&
+		// 		 b === "X" || b === "O" &&
+		// 		 c === "X" || c === "O" &&
+		// 		 d === "X" || d === "O" &&
+		// 		 e === "X" || e === "O" &&
+		// 		 f === "X" || f === "O" &&
+		// 		 g === "X" || g === "O" &&
+		// 		 h === "X" || h === "O" &&
+		// 		 i === "X" || i === "O") {
+		// 	tie();
+		// }
 		else {
 			console.log("Next Player");
 		}
