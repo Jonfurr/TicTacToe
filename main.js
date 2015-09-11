@@ -50,6 +50,7 @@ $(function() {
 		$("#leftwins").html(winCount);
 		$("#rightlosses").html(winCount);
 		$("h2").html("Player 1 wins");
+		count = 0;
 		clearBoard();
 	}
 
@@ -59,6 +60,7 @@ $(function() {
 		$("#leftlosses").html(winCount);
 		$("#rightwins").html(winCount);
 		$("h2").html("Player 2 wins");
+		count = 0;
 		clearBoard();
 	}
 
