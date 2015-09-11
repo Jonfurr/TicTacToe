@@ -15,12 +15,29 @@ $(function() {
 			turnCounter++;
 		});
 	};
+	function clearBoard() {
+		$("#one").html("");
+		$("#two").html("");
+		$("#three").html("");
+		$("#four").html("");
+		$("#five").html("");
+		$("#six").html("");
+		$("#seven").html("");
+		$("#eight").html("");
+		$("#nine").html("");
+}
+	function resetButton() {
+		$("#resetButton").on("click",function(){
+			clearBoard();
+		})
+	}
 	function xWins(){
 		$(".headmid").html("<p>Player 1 Wins!</p>");
 		var wins = parseInt($("#leftwins").html());
 		var winCount = wins + 1;
 		$("#leftwins").html(winCount);
 		$("#rightlosses").html(winCount);
+		clearBoard();
 	}
 
 	function oWins(){
@@ -29,6 +46,7 @@ $(function() {
 		var winCount = wins + 1;
 		$("#leftlosses").html(winCount);
 		$("#rightwins").html(winCount);
+		clearBoard();
 	}
 
 
@@ -98,6 +116,6 @@ $(function() {
 
 	}
 
-
+	resetButton();
 	gamePlay();
 });
