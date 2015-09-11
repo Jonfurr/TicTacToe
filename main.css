@@ -2,10 +2,12 @@
 
 
 .header	{
-	border-bottom: 3px solid black;
 	text-align: center;
 	background-color: #B3B3B3;
 	margin-top: 5%;
+	margin-bottom: 2%;
+	box-shadow: 3px 3px 3px #888888;
+	border-radius: 20px;
 }
 .header p {
 	font-size: 500%;
@@ -15,6 +17,8 @@
 
 .body {
 	background-color: #E0E0E0;
+	box-shadow: 3px 3px 3px #888888;
+	border-radius: 20px;
  }
 
 
@@ -29,11 +33,9 @@ h2 {
 	font-family: 'Poiret One', cursive;
 }
 
-}
-.left {
+.scoreboard {
 	text-align: center;
 	padding: 5% 0 25% 0;
-
 }
 
 .mid {
@@ -46,15 +48,11 @@ h2 {
 .left-col {
 	text-align: right;
 }
-
+ 
 .right-col {
 	text-align: left;
 }
 
-.right {
-	text-align: center;
-	padding: 5% 0 25% 0;
-}
 
 
 button {
@@ -63,14 +61,13 @@ button {
 	height: 55px;
 	color: #000000;
 	font-size: 90%;
-	/*background-image: url("button-default.png");*/
 	background-size: 100%;
 	background-repeat: no-repeat;
 	padding-right: 3px;
 	padding-bottom: 3px;
-	color
+	box-shadow: 3px 3px 3px #888888;
 }
 
 input {
-	margin-top: 5%
+	margin-top: 5%;
 }

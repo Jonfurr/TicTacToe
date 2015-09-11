@@ -1,25 +1,33 @@
 $(function() {
+	var count= 0
+
 	function gamePlay() {
 		var turnCounter = 0
 		$("button").on("click",function() {
+			count++;
 			if (turnCounter % 2 === 0) {
 				($(this).html("X"));
 				$("h2").html("");
-				getWinner();
+				// disableButton();
+				getWinner();	
 			}
 			else {
 				($(this).html("O"));
 				$("h2").html("");
+				// disableButton();
 				getWinner();
 			}
+
+			if ((count == 9) && !(getWinner())) {
+				$("h2").html("It's a tie");
+				clearBoard();
+				count == 0;
+			}
+
 			turnCounter++;
 		});
 	};
-	// function buttonOnce(){
-	// 	if ($("button").html() === "X" || $("button").html() === "O") {
-	// 		$('button').attr("disabled", true);
-		// }
-	// }
+
 	function clearBoard() {
 		$("#one").html("");
 		$("#two").html("");
@@ -30,12 +38,14 @@ $(function() {
 		$("#seven").html("");
 		$("#eight").html("");
 		$("#nine").html("");
-}
+	}
+
 	function resetButton() {
 		$("#resetButton").on("click",function(){
 			clearBoard();
 		})
 	}
+
 	function xWins(){
 		var wins = parseInt($("#leftwins").html());
 		var winCount = wins + 1;
@@ -54,25 +64,56 @@ $(function() {
 		clearBoard();
 	}
 
-	// function tie(){
-	// 	alert("It's a tie");
-	// 	clearBoard();
+	// function disableButton(){
+	// 	var a = $("#one").html();
+	// 	var b = $("#two").html();
+	// 	var c = $("#three").html();
+	// 	var d = $("#four").html();
+	// 	var e = $("#five").html();
+	// 	var f = $("#six").html();
+	// 	var g = $("#seven").html();
+	// 	var h = $("#eight").html();
+	// 	var i = $("#nine").html();
+	// 	if ((a == "X") || (a == "O")) {
+	// 		$("#one").disabled = true;
+	// 	}
+	// 	if ((b == "X") || (b == "O")) {
+	// 		$("#two").disabled = true;
+	// 	}
+	// 	if ((c == "X") || (c == "O")) {
+	// 		$("#three").disabled = true;
+	// 	}
+	// 	if ((d == "X") || (d == "O")) {
+	// 		$("#four").disabled = true;
+	// 	}
+	// 	if ((e == "X") || (e == "O")) {
+	// 		$("#five").disabled = true;
+	// 	}
+	// 	if ((f == "X") || (f == "O")) {
+	// 		$("#six").disabled = true;
+	// 	}
+	// 	if ((g == "X") || (g == "O")) {
+	// 		$("#seven").disabled = true;
+	// 	}
+	// 	if ((h == "X") || (h == "O")) {
+	// 		$("#eight").disabled = true;
+	// 	}
+	// 	if ((i == "X") || (i == "O")) {
+	// 		$("#nine").disabled = true;
+	// 	}
 	// }
 
-
-
 	function getWinner() {
-		var a = $("#one").html();
-		var b = $("#two").html();
-		var c = $("#three").html();
-		var d = $("#four").html();
-		var e = $("#five").html();
-		var f = $("#six").html();
-		var g = $("#seven").html();
-		var h = $("#eight").html();
-		var i = $("#nine").html();
-
-		if (a === "X" && b === "X" && c === "X") {
+	var a = $("#one").html();
+	var b = $("#two").html();
+	var c = $("#three").html();
+	var d = $("#four").html();
+	var e = $("#five").html();
+	var f = $("#six").html();
+	var g = $("#seven").html();
+	var h = $("#eight").html();
+	var i = $("#nine").html();			
+		if	(a === "X" && b === "X" && c === "X") {
 			xWins();
 		}		
 		else if (d === "X" && e === "X" && f === "X") {
@@ -117,26 +158,11 @@ $(function() {
 		else if (a === "O" && e === "O" && i === "O") {
 			oWins();
 		}
-		else if (c === "O" && e === "O" && g === "O") {
+		else if(c === "O" && e === "O" && g === "O") {
 			oWins();
-		}
-		// else if (a === "X" || a === "O" &&
-		// 		 b === "X" || b === "O" &&
-		// 		 c === "X" || c === "O" &&
-		// 		 d === "X" || d === "O" &&
-		// 		 e === "X" || e === "O" &&
-		// 		 f === "X" || f === "O" &&
-		// 		 g === "X" || g === "O" &&
-		// 		 h === "X" || h === "O" &&
-		// 		 i === "X" || i === "O") {
-		// 	tie();
-		// }
-		else {
-			console.log("Next Player");
 		}
 
 	}
-
 	resetButton();
 	gamePlay();
 });

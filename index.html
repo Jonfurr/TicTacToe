@@ -6,12 +6,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="main.js"></script>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="stylesheet" href="animate.css">
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="animate.css"
 	</head>
 	<body>
-		<div class= "container">
+		<div class= " mainBox container">
 			<header class= "header row">
 				<!-- Sticky header -->
 				<div class= "headleft col-xs-2">
@@ -25,22 +25,15 @@
 				</div>
 			</header>
 			<div class="body row">	
-				<div class="left col-xs-3">
+				<div class="scoreboard col-xs-3">
 					<!-- Player 1 statistics -->
 					<h1>PLAYER 1</h1>
 					<h3>Wins: <h4 id= "leftwins">0</h4></h3>
 					<h3>Losses: <h4 id="leftlosses">0</h4></h3>
-
-
 				</div>
 				<div class = "col-xs-1">
 				</div>
-				<div class="board mid col-xs-4">
-					<div class = "row">
-						<div class = "col-xs-12">
-							<h2 class= "animated rubberBand infinite"></h2>
-						</div>
-					</div>
+				<div class="mid col-xs-4">
 					<!-- Game board -->
 					<div class="toprow row">
 						<div class="left-col center-block col-xs-4">
@@ -76,10 +69,15 @@
 						</div>
 					</div>
 					<input id="resetButton" type="button" value="Reset Board">
+					<div class = "row">
+						<div class = "col-xs-12">
+							<h2 class= "animated flash infinite"></h2>
+						</div>
+					</div>
 				</div>
 				<div class = "col-xs-1">
 				</div>
-				<div class="right col-xs-3">
+				<div class="right scoreboard col-xs-3">
 					<!-- Player 2 statistics -->
 					<h1>PLAYER 2</h1>
 					<h3>Wins: <h4 id= "rightwins">0</h4></h3>
