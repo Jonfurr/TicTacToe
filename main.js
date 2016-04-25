@@ -49,7 +49,7 @@ $(function() {
 		var winCount = wins + 1;
 		$("#leftwins").html(winCount);
 		$("#rightlosses").html(winCount);
-		$("h2").html("Player 1 wins");
+		$("h2").html("Tbird wins");
 		count = 0;
 		clearBoard();
 	}
